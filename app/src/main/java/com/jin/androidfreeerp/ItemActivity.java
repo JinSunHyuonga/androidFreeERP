@@ -172,8 +172,8 @@ public class ItemActivity extends AppCompatActivity {
 
             try {
 
-                itemList.add(new Item("002", "002아이템", 1000, 10000, "002메모", 0, 0));
-                getItem = true;
+                //itemList.add(new Item("002", "002아이템", 1000, 10000, "002메모", 0, 0));
+                //getItem = true;
 
                 Socket socket = new Socket(host, port);
                 ObjectOutputStream outstream = new ObjectOutputStream(socket.getOutputStream());
@@ -200,6 +200,7 @@ public class ItemActivity extends AppCompatActivity {
                 }
 
                 Log.d("ClientThread", "get data end ");
+                getItem = true;
 
             } catch (Exception e) {
                 e.printStackTrace();
